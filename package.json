@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc -w",
-    "test": "jest"
+    "test": "jest src --watchAll"
   },
   "author": "",
   "license": "ISC",
