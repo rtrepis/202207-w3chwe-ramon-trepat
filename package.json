@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc -w",
-    "test": "jest src --watchAll"
+    "tsc": "tsc",
+    "tscw": "tsc -w",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
