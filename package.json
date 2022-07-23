@@ -5,7 +5,7 @@
   "scripts": {
     "tsc": "tsc",
     "tscw": "tsc -w",
-    "test": "jest"
+    "test": "jest src --watchAll"
   },
   "author": "",
   "license": "ISC",
