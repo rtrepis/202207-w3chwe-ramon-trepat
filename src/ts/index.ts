@@ -1,5 +1,3 @@
-import Component from "./components/Component/Component.js";
-import ItemCard from "./components/ItemCard/ItemCard.js";
 import ItemsList from "./components/ItemsList/ItemsList.js";
 import { IitemApiObjec } from "./types/i-components.js";
 
@@ -22,7 +20,6 @@ const getApiItem = async (id: number) => {
 
 (async () => {
   await getApiItem(1);
-  new ItemCard(document.body, itemApiObjec.name, itemApiObjec.picture);
   new ItemsList(document.querySelector(".container"));
 })();
 

@@ -7,7 +7,7 @@ class ItemCard extends Component implements IComponent {
   itemImg;
 
   constructor(parent: HTMLElement, name: string, imgUrl: string) {
-    super(parent, "card mb-3", "div");
+    super(parent, "card mb-3 m-2", "div");
 
     this.itemName = name;
     this.itemImg = imgUrl;

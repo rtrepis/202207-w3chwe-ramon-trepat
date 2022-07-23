@@ -1,4 +1,3 @@
-import ItemCard from "./components/ItemCard/ItemCard.js";
 import ItemsList from "./components/ItemsList/ItemsList.js";
 const apiUrl = "https://pokeapi.co/api/v2/pokemon/";
 export const itemApiObjec = {
@@ -14,7 +13,6 @@ const getApiItem = async (id) => {
 };
 (async () => {
     await getApiItem(1);
-    new ItemCard(document.body, itemApiObjec.name, itemApiObjec.picture);
     new ItemsList(document.querySelector(".container"));
 })();
 export default itemApiObjec;
