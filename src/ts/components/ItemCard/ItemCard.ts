@@ -18,7 +18,7 @@ class ItemCard extends Component implements IComponent {
     const html = `
         <img src="${this.itemImg}" class="card-img-top" alt="picture ${this.itemName} pokemon">
         <div class="card-body">
-        <h5 class="card-title text-capitalize fs-1 text-center">${this.itemName}</h5>
+        <h2 class="card-title text-capitalize text-center">${this.itemName}</h2>
         <a href="#" class="btn btn-primary fs-6">No implemeted</a>
     `;
 
