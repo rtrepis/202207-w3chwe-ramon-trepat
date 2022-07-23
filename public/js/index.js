@@ -1,6 +1,19 @@
 import Component from "./components/Component/Component.js";
 import ItemCard from "./components/ItemCard/ItemCard.js";
-export const apiUrl = "https://pokeapi.co/api/v2/pokemon/";
+const apiUrl = "https://pokeapi.co/api/v2/pokemon/";
 new Component(document.body, "AppPokemons", "div");
-new ItemCard(document.body, 2);
-export default apiUrl;
+const itemApiObjec = {
+    name: "",
+    picture: "",
+};
+const getApiItem = async (id) => {
+    const response = await fetch(`${apiUrl}${id}`);
+    const data = await response.json();
+    itemApiObjec.name = data.name;
+    itemApiObjec.picture = data.sprites.other.home.front_default;
+    return data;
+};
+(async () => {
+    await getApiItem(1);
+    new ItemCard(document.body, itemApiObjec.name, itemApiObjec.picture);
+})();
