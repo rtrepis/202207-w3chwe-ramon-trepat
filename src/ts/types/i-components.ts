@@ -1,6 +1,9 @@
-interface IComponent {
+export interface IComponent {
   element: HTMLElement;
   render?: () => void;
 }
 
-export default IComponent;
+export interface IitemApiObjec {
+  name: string;
+  picture: string;
+}
