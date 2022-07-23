@@ -1,4 +1,5 @@
 class Component {
+    element;
     constructor(parent, className, tag = "div") {
         this.element = document.createElement(tag);
         this.element.className = className;

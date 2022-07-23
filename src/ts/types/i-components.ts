@@ -3,4 +3,7 @@ interface IComponent {
   render?: () => void;
 }
 
+export interface Iitem {
+  id: number;
+}
 export default IComponent;
