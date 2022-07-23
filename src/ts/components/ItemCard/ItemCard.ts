@@ -16,10 +16,12 @@ class ItemCard extends Component implements IComponent {
 
   render(): void {
     const html = `
+      <div className="cols">
         <img src="${this.itemImg}" class="card-img-top" alt="picture ${this.itemName} pokemon">
         <div class="card-body">
         <h2 class="card-title text-capitalize text-center">${this.itemName}</h2>
         <a href="#" class="btn btn-primary fs-6">No implemeted</a>
+      </div>
     `;
 
     this.element.innerHTML = html;
