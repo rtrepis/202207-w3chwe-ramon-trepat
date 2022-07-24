@@ -1,26 +1,9 @@
 import ItemsList from "./components/ItemsList/ItemsList.js";
-import { IitemApiObjec } from "./types/i-components.js";
-
-const apiUrl = "https://pokeapi.co/api/v2/pokemon/";
-
-export const itemApiObjec: IitemApiObjec = {
-  name: "",
-  picture: "",
-};
-
-const getApiItem = async (id: number) => {
-  const response = await fetch(`${apiUrl}${id}`);
-  const data = await response.json();
-
-  itemApiObjec.name = data.name;
-  itemApiObjec.picture = data.sprites.other.home.front_default;
-
-  return data;
-};
+import { getApiItem } from "./utility/getApiItem.js";
+import getApiList from "./utility/getApiList.js";
 
 (async () => {
-  await getApiItem(1);
-  new ItemsList(document.querySelector(".container"));
+  const listApi = await getApiList();
+  console.log(listApi);
+  new ItemsList(document.querySelector(".container"), listApi);
 })();
-
-export default itemApiObjec;

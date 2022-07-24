@@ -5,5 +5,12 @@ export interface IComponent {
 
 export interface IitemApiObjec {
   name: string;
-  picture: string;
+  url: string;
+}
+
+export interface IlistApiObject {
+  count: number;
+  next: string;
+  previus: string | null;
+  results: [];
 }
