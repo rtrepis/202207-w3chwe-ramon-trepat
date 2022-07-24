@@ -7,25 +7,13 @@ class ItemsList extends Component {
   listApiobject: IlistApiObject;
 
   constructor(parent: HTMLElement, listApi: IlistApiObject) {
-    super(parent, "row row-cols-1 row-cols-md-4 g-4", "div");
+    super(parent, "row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3", "div");
 
     this.listApiobject = listApi;
     this.render();
   }
 
   render(): void {
-    const html: string = `
-    <nav aria-label="Page navigation">
-      <ul class="pagination justify-content-center">
-        <li class="page-item disabled">
-          <a class="page-link" href="${this.listApiobject.previus}" tabindex="-1" aria-disabled="true">Previous</a>
-        </li>
-        <li class="page-item p-2">${this.listApiobject.count}</li>
-        <li class="page-item disabled">
-          <a class="page-link" href="${this.listApiobject.next}">Next</a>
-        </li>
-    `;
-
     this.listApiobject.results.forEach((porkemon: IitemApiObjec) => {
       (async () => {
         const ItemApi = await getApiItem(porkemon.url);
@@ -36,8 +24,6 @@ class ItemsList extends Component {
         );
       })();
     });
-
-    this.element.innerHTML = html;
   }
 }
 
