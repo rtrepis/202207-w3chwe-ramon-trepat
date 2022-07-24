@@ -1,5 +1,4 @@
 import ItemsList from "./components/ItemsList/ItemsList.js";
-import { getApiItem } from "./utility/getApiItem.js";
 import getApiList from "./utility/getApiList.js";
 
 const apiUrl = "https://pokeapi.co/api/v2/pokemon/";
