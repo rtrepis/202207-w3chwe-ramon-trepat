@@ -1,5 +1,5 @@
 import { IlistApiObject, IitemApiObjec } from "../../types/i-components.js";
-import { getApiItem, itemApiObjec } from "../../utility/getApiItem.js";
+import { getApiItem } from "../../utility/getApiItem.js";
 import Component from "../Component/Component.js";
 import ItemCard from "../ItemCard/ItemCard.js";
 
@@ -21,7 +21,7 @@ class ItemsList extends Component {
           <a class="page-link" href="${this.listApiobject.previus}" tabindex="-1" aria-disabled="true">Previous</a>
         </li>
         <li class="page-item p-2">${this.listApiobject.count}</li>
-        <li class="page-item">
+        <li class="page-item disabled">
           <a class="page-link" href="${this.listApiobject.next}">Next</a>
         </li>
     `;
