@@ -29,7 +29,7 @@ class Pagination extends Component implements IComponent {
          <li class="page-item disabled">
           <a
             class="page-link"
-              href="#"
+        
               tabindex="-1"
               aria-disabled="true"
               >Previous</a
@@ -37,7 +37,7 @@ class Pagination extends Component implements IComponent {
           </li>
           <li class="page-item p-2">${this.count}</li>
           <li class="page-item disabled">
-          <a class="page-link" href="#">Next</a>
+          <a class="page-link" >Next</a>
           </li>  
        </ul>
     `;
