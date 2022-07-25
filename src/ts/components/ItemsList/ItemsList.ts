@@ -1,9 +1,14 @@
-import { IlistApiObject, IitemApiObjec } from "../../types/i-components.js";
+import {
+  IlistApiObject,
+  IitemApiObjec,
+  IComponent,
+} from "../../types/i-components.js";
 import { getApiItem } from "../../utility/getApiItem.js";
 import Component from "../Component/Component.js";
 import ItemCard from "../ItemCard/ItemCard.js";
+import Pagination from "../Pagination/Pagination.js";
 
-class ItemsList extends Component {
+class ItemsList extends Component implements IComponent {
   listApiobject: IlistApiObject;
 
   constructor(parent: HTMLElement, listApi: IlistApiObject) {
@@ -24,6 +29,13 @@ class ItemsList extends Component {
         );
       })();
     });
+
+    new Pagination(
+      document.querySelector(".list"),
+      this.listApiobject.next,
+      this.listApiobject.previus,
+      this.listApiobject.count
+    );
   }
 }
 
