@@ -38,5 +38,4 @@ class ItemsList extends Component implements IComponent {
     );
   }
 }
-
 export default ItemsList;
